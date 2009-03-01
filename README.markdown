@@ -25,7 +25,6 @@ Here's an example of how you would integrate Jython Shell Server into an off-the
 1. Download the IRCcat sources, run "git clone git://github.com/RJ/irccat.git"
 2. Copy the jython jar file to the libs directory
 3. Copy the JythonShellServer.jar to the libs directory
-
 4. Instantiate Jython Shell Server inside IRCCat.java inside the IRCCat constructor:
 
 	public IRCCat(XMLConfiguration c) throws Exception {
@@ -36,13 +35,9 @@ Here's an example of how you would integrate Jython Shell Server into an off-the
                com.enigmacurry.JythonShellServer.run_server(7000, localVars);
 
 localVars is a map of variable names that you want to have available to you inside the Jython REPL. In the above example we are placing the main IRCCat object (referenced by 'this') as a variable in Jython called "IRCCat".
-
 5. Build IRCCat by running "ant".
-
 6. Setup your own irccat.xml file (based on the one in the examples directory).
-
 7. run IRCCat "ant -Dconfigfile=irccat.xml run"
-
 8. now telnet into the application: "telnet localhost 7000".
 
 Supposing you set in your irccat.xml file for IRCCat to join a channel called "#TestIRCCat" you can now play around with the bot inside the Jython REPL:
