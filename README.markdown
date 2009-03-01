@@ -26,7 +26,7 @@ Here's an example of how you would integrate Jython Shell Server into an off-the
 2. Copy the jython jar file to the libs directory
 3. Copy the JythonShellServer.jar to the libs directory
 
-Instantiate Jython Shell Server inside IRCCat.java inside the default IRCCat constructor:
+Instantiate Jython Shell Server inside IRCCat.java inside the IRCCat constructor:
 
 	public IRCCat(XMLConfiguration c) throws Exception {
 
