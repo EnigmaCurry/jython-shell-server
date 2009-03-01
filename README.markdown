@@ -5,6 +5,7 @@ This library embeds a network-reachable, interactive, Jython shell into any Java
 ## Building
 
 You'll need:
+
 1. a Java SDK (tested on 1.6)
 2. [ant](http://ant.apache.org)
 3. [Jython](http://www.jython.org) (tested on 2.5b1)
