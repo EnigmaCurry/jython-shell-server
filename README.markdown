@@ -12,6 +12,10 @@ You'll need:
 
 Running 'ant' in the source directory builds JythonShellServer.jar which you can include in your applications CLASSPATH.
 
+## Known issues
+
+This library is not threadsafe, yet. You can log into the REPL more than once, but due to the way the console is printed, the first connection will stop working when you log in through the second connection. 
+
 ## Usage
 
 1. Include your Jython jar file and JythonShellServer.jar in your application's CLASSPATH.
