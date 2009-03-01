@@ -1,0 +1,33 @@
+<project name="JythonShellServer" default="dist" basedir=".">
+  <property name="src.dir" location="src"/>
+  <property name="build.dir" location="build"/>
+  <property name="lib.dir" location="lib"/>
+
+  <path id="classpath">
+    <fileset dir="${lib.dir}" includes="**/*.jar"/>
+  </path>
+
+  <target name="init">
+    <tstamp/>
+    <mkdir dir="${build.dir}"/>
+  </target>
+
+  <target name="clean">
+    <delete dir="${build.dir}"/>
+    <delete file="JythonShellServer.jar"/>
+  </target>
+
+  <target name="dist" depends="clean, init">
+    <!-- Build JythonShellServer (java) -->
+    <javac srcdir="${src.dir}" destdir="${build.dir}" classpathref="classpath"/>
+    <!-- Copy JythonShellServer (python) to build -->
+    <copy todir="${build.dir}/telnet_shell_server">
+      <fileset dir="${src.dir}/telnet_shell_server" />
+    </copy>
+    <!-- Copy LICENSE to build -->
+    <copy file="LICENSE" todir="${build.dir}" />
+    <!-- Create distributable jar file -->
+    <jar jarfile="JythonShellServer.jar" basedir="${build.dir}" />
+  </target>
+
+</project>
