@@ -10,7 +10,7 @@ You'll need:
 2. [ant](http://ant.apache.org)
 3. [Jython](http://www.jython.org) (tested on 2.5b1)
 
-Running 'ant' in the source directory builds JythonShellServer.jar which you can include in your applications CLASSPATH.
+Copy your jython jar into the lib folder and run 'ant'. This builds JythonShellServer.jar which you can include in your application's CLASSPATH.
 
 ## Known issues
 
