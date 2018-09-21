@@ -24,7 +24,7 @@ This library is not threadsafe, yet. You can log into the REPL more than once, b
 
 ## Example
 
-Here's an example of how you would integrate Jython Shell Server into an off-the-shelf java application. Let's use one of the most popular java projects here on github: [IRCcat](http://github.com/RJ/irccat/tree), which is a nifty IRC bot that responds to messages netcat'd to it.
+Here's an example of how you would integrate Jython Shell Server into an off-the-shelf java application. Let's use one of the most popular java projects here on github: [IRCcat](http://github.com/RJ/irccat), which is a nifty IRC bot that responds to messages netcat'd to it.
 
 1. Download the IRCcat sources, run "git clone git://github.com/RJ/irccat.git"
 2. Copy the jython jar file to the libs directory
@@ -47,9 +47,9 @@ localVars is a map of variable names that you want to have available to you insi
 
 Supposing you set in your irccat.xml file for IRCCat to join a channel called "#TestIRCCat" you can now play around with the bot inside the Jython REPL:
 
-![Jython Shell Server REPL](http://github.com/EnigmaCurry/jython-shell-server/raw/59d09734b826a7e427ba408dece13339e2e39c66/doc/IRCcatREPL.png?raw=true)
+![Jython Shell Server REPL](https://github.com/EnigmaCurry/jython-shell-server/raw/59d09734b826a7e427ba408dece13339e2e39c66/doc/IRCcatREPL.png)
 
 and you can see the effect in the IRC channel:
 
-![IRCcat in channel](http://github.com/EnigmaCurry/jython-shell-server/raw/59d09734b826a7e427ba408dece13339e2e39c66/doc/TestIRCcat.png?raw=true)
+![IRCcat in channel](https://github.com/EnigmaCurry/jython-shell-server/raw/59d09734b826a7e427ba408dece13339e2e39c66/doc/TestIRCcat.png)
 
