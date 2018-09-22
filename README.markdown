@@ -22,6 +22,8 @@ This library is not threadsafe, yet. You can log into the REPL more than once, b
 2. Somewhere in your application run com.enigmacurry.JythonShellServer.run_server(7000);
 3. run "telnet localhost 7000" and you should be connected to the Jython REPL.
 
+If you want readline support, install [rlwrap](https://github.com/hanslub42/rlwrap) and instead run "rlwrap telnet localhost 7000".
+
 ## Example
 
 Here's an example of how you would integrate Jython Shell Server into an off-the-shelf java application. Let's use one of the most popular java projects here on github: [IRCcat](http://github.com/RJ/irccat), which is a nifty IRC bot that responds to messages netcat'd to it.
@@ -31,12 +33,14 @@ Here's an example of how you would integrate Jython Shell Server into an off-the
 3. Copy the JythonShellServer.jar to the libs directory
 4. Instantiate Jython Shell Server inside IRCCat.java inside the IRCCat constructor:
 
-	public IRCCat(XMLConfiguration c) throws Exception {
-
-               //Load Jython shell server
-               java.util.Map localVars = new java.util.HashMap();
-               localVars.put("IRCCat",this);
-               com.enigmacurry.JythonShellServer.run_server(7000, localVars);
+```
+public IRCCat(XMLConfiguration c) throws Exception {
+    //Load Jython shell server
+    java.util.Map localVars = new java.util.HashMap();
+    localVars.put("IRCCat",this);
+    com.enigmacurry.JythonShellServer.run_server(7000, localVars);
+}
+```
 
 localVars is a map of variable names that you want to have available to you inside the Jython REPL. In the above example we are placing the main IRCCat object (referenced by 'this') as a variable in Jython called "IRCCat".
 
